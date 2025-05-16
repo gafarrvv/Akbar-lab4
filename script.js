@@ -168,14 +168,12 @@ function saveEntry(section, index) {
     cvData[section][index] = [key, value];
     localStorage.setItem('cvData', JSON.stringify(cvData));
 }
-
 // 4. addEntry funksiyasında da localStorage-a yaz
 function addEntry(section) {
     cvData[section].push(["Yeni başlıq", "Yeni təsvir"]);
     localStorage.setItem('cvData', JSON.stringify(cvData));
     renderCV();
 }
-
 // 5. deleteEntry funksiyasında da localStorage-a yaz
 function deleteEntry(section, index) {
     cvData[section].splice(index, 1);
